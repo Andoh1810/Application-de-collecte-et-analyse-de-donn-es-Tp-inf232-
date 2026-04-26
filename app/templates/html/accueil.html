@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}Accueil{% endblock  %}
+{% block contenu %}
+
+<img src="{{ url_for('static', filename='img/image2.png') }}" alt="image2" class="image2">
+<section class="section1 un">
+    <section class="text">
+        <p><span>Tp Inf232</span></p>
+        <h1> <span>K</span>OLEKT <span>APP</span></h1><br>
+        <p>application de collecte et analyse de données sur le niveau de stress des étudiants</p><br><br>
+        <button><a href="{{ url_for('main.formulaire') }}">Répondre aux questions</a></button>
+        <button class="btn-un"><a href="{{ url_for('main.analyse') }}">Voir les analyses</a></button>
+    </section>
+    <img src="{{ url_for('static', filename='img/image1.png') }}" alt="image1" class="image1 foot">
+</section>
+<section class="section1 un" style="background-color: rgba(0, 0, 255, 0);">
+    <section style="margin-top: 5rem; margin-bottom: 5rem;">
+        <h1 style="text-align: center; margin-bottom: 5rem;">Comment ça marche?</h1>
+        <div class="comment_ca_marche">
+            <div>
+                <p class="chiffre"><span>1</span></p><br>
+                <p class="titre"><span>Réponds au questionnaire</span></p>
+                <p class="descrip">Réponds anonymement à 10 questions sur ton niveau de stress, tes habitudes de sommeil et ta façon de gérer la pression des études.</p>
+            </div>
+            <div>
+                <p class="chiffre"><span>2</span></p><br>
+                <p class="titre"><span>Tes données sont enregistrées</span></p>
+                <p class="descrip">Tes réponses sont automatiquement sauvegardées dans notre base de données et ajoutées aux réponses des autres étudiants.</p>
+            </div>
+            <div>
+                <p class="chiffre"><span>3</span></p><br>
+                <p class="titre"><span> Consulte l'analyse</span></p>
+                <p class="descrip">Accède au dashboard pour voir les statistiques et graphiques générés en temps réel à partir de toutes les réponses collectées.</p>
+            </div>
+        </div>
+    </section>
+</section>
+<section class="section1 un" style="height: 50vh;">
+    <div style="width: 100%;background: none; display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 2rem;">
+        <img src="{{ url_for('static', filename='img/image2.png') }}" alt="image1" class="image1">
+        <section class="text">
+            <h1> <span>K</span>OLEKT <span>APP</span></h1><br>
+            <p>Prêt à commencer l'expérience avec l'application kolekt?</p><br><br>
+            <button><a href="{{ url_for('main.formulaire') }}">Lance toi maintenat!</a></button>
+        </section>
+    </div>
+</section>
+
+{% endblock  %}

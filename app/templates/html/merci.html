@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Merci{% endblock  %}
+
+{% block contenu %}
+
+
+<section class="section1" style="align-items: flex-start;">
+    <img src="{{ url_for('static', filename='img/image2.png') }}" alt="image2" class="image2">
+    <section style="margin-top: 15rem;">
+        <p>Merci <span>pour</span> vos <span>réponses!</span></p>
+        <button><a href="{{ url_for('main.accueil') }}">Retour à l'accueil</a></button>
+        <button class="btn-un"><a href="{{ url_for('main.analyse') }}">Voir l'analyse des données</a></button>
+    </section>
+</section>
+
+{% endblock  %}

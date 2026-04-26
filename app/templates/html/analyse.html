@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Analyse{% endblock  %}
+
+{% block contenu %}
+
+<h1 style="text-align: center;">Dashb<span>oard</span></h1>
+
+<div class="comment_ca_marche prems" style="margin-top: 6rem; margin-bottom: 6rem;">
+            <div class="results">
+                <p class="descrip">Nombre total de réponses</p>
+                <p><span>{{total_reponse}}</span></p><br>
+            </div>
+            <div class="results">
+                <p class="descrip">Moyenne de stress</p>
+                <p><span> {{moy_stress}}</span></p><br>
+            </div>
+            <div class="results">
+                <p class="descrip">Médiane</p>
+                <p><span>{{mediane}}</span></p><br>
+            </div>
+            <div class="results">
+                <p class="descrip">Mode</p>
+                <p><span>{{mode}}</span></p><br>
+            </div>
+</div>
+
+<div class="graphes">
+    <div id="graphe1"></div>
+    <div id="graphe2"></div>
+    <div id="graphe3"></div>
+</div>
+
+
+<script>
+    var graphe1 = {{ graphe1 | safe }};
+    Plotly.newPlot('graphe1', graphe1.data, graphe1.layout);
+
+    var graphe2 = {{ graphe2 | safe }};
+    Plotly.newPlot('graphe2', graphe2.data, graphe2.layout);
+
+    var graphe3 = {{ graphe3 | safe }};
+    Plotly.newPlot('graphe3', graphe3.data, graphe3.layout);
+</script>
+
+{% endblock  %}

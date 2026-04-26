@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block title %}Accueil{% endblock %}
+{% block contenu %}
+
+<section class="section1">
+    <section class="formulaire">
+        <h1 style="text-align: center; margin-top: 3rem;margin-bottom: 6rem;"><span>Repondez</span> aux <span>questions</span> suivantes</h1>
+        <section class="form-container">
+            <img src="{{ url_for('static', filename='img/image3.png') }}" alt="image1" class="image1">
+            <form action="/formulaire" method="post">
+                <div class="form-line">
+                    <div class="form-line-item">
+                        <label for="genre">genre</label><br>
+                        <select name="genre">
+                            <option value="Homme" selected>Homme</option>
+                            <option value="Femme">Femme</option>
+                        </select><br>
+                    </div>
+
+                    <div class="form-line-item">
+                        <label for="age">âge</label><br>
+                        <input type="number" name="age" min="1" required><br>
+                    </div>
+
+                </div>
+
+                <div class="form-line">
+                    <div class="form-line-item">
+                        <label for="filiere">filière</label><br>
+                        <select name="filiere">
+                            <option value="Informatique" selected>Informatique</option>
+                            <option value="Mathematique">Mathematique</option>
+                            <option value="Physique">Physique</option>
+                            <option value="Chimie">Chimie</option>
+                            <option value="Bios">Bios</option>
+                            <option value="Geos">Geos</option>
+                            <option value="Autres">Autres</option>
+                        </select><br>
+                    </div>
+
+                    <div class="form-line-item">
+                        <label for="annee">Niveau</label><br>
+                        <select name="annee">
+                            <option value="L1" selected>L1</option>
+                            <option value="L2">L2</option>
+                            <option value="L3">L3</option>
+                            <option value="Master1">Master1</option>
+                            <option value="Master2">Master2</option>
+                        </select><br>
+                    </div>
+
+
+                </div>
+                <label for="niveau_stress">niveau stress /10 pendant les examens</label><br>
+                <input type="number" name="niveau_stress" min="1" max="10" required><br>
+
+                <label for="cause_stress">principale cause</label><br>
+                <select name="cause_stress">
+                    <option value="Examens" selected>Examens</option>
+                    <option value="Finances">Finances</option>
+                    <option value="Famille">Famille</option>
+                    <option value="Avenir professionnel">Avenir professionnel</option>
+                    <option value="Autre">Autre</option>
+                </select><br>
+
+                <label for="heure_sommeil">heures de sommeil en période d'examens ? </label><br>
+                <select name="heures_sommeil">
+                    <option value="Moins de 4h" selected>Moins de 4h</option>
+                    <option value="4h-6h">4h-6h</option>
+                    <option value="6h-8h">6h-8h</option>
+                    <option value="Plus de 8h">Plus de 8h</option>
+                    <option value="Autre">Autre</option>
+                </select><br>
+
+                <label for="fait_sport">Fais-tu du sport pour gérer ton stress ?</label><br>
+                <select name="fait_sport">
+                    <option value="Jamais" selected>Jamais</option>
+                    <option value="Parfois">Parfois</option>
+                    <option value="Souvent">Souvent</option>
+                    <option value="Oui">Oui</option>
+                    <option value="Non">Non</option>
+                </select><br>
+
+
+                <label for="songe_abandon">As-tu déjà songé à abandonner tes études à cause du stress ?</label><br>
+                <select name="songe_abandon">
+                    <option value="Oui" selected>Oui</option>
+                    <option value="Non">Non</option>
+                </select><br>
+
+                <label for="gestion_stress">Comment gères-tu ton stress ?</label><br>
+                <select name="gestion_stress">
+                    <option value="Musique" selected>Musique</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Amis">Amis</option>
+                    <option value="Prière">Prière</option>
+                    <option value="Réseaux sociaux">Réseaux sociaux</option>
+                    <option value="Autre">Autre</option>
+                </select><br>
+
+                <button type="submit">Soumettre mes réponses</button>
+            </form>
+        </section>
+    </section>
+
+</section>
+{% endblock %}
