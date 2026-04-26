@@ -1,0 +1,17 @@
+#Environnement virtuelle
+stress_env/
+
+# Base de données
+*.db
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Variables d'environnement
+.env
