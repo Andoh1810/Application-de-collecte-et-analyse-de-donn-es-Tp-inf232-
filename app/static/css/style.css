@@ -114,12 +114,13 @@ header{
 }
 
 .section1{
-    min-height: 88vh;
+    min-height: 80vh;
     background-color: var(--couleur-fond);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0rem 5rem;
+    padding-bottom: 5rem;
     gap: 10rem;
     flex-wrap: wrap;
 }
@@ -131,7 +132,7 @@ p{
 
 .image1{
     width: 50rem;
-    height: auto;
+  
     border-radius: 2rem;
     box-shadow: 0 0 1.5rem var(--nav);
     cursor: pointer;
@@ -319,6 +320,10 @@ button:hover{
     }
     footer{
         display: none;
+    }
+    button{
+        width: 100%;
+        margin: 1rem 0;
     }
 }
 
