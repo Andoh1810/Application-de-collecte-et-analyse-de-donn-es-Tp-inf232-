@@ -1,5 +1,6 @@
 #Environnement virtuelle
 stress_env/
+env/
 
 # Base de données
 *.db
